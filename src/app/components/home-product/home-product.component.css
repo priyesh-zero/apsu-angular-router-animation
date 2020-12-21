@@ -1,0 +1,164 @@
+#homeProduct {
+    margin-top: 3rem;
+    padding: calc(100vh * 0.05) calc(100vw * 0.05);
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#info {
+    padding: calc(100vh * 0.01) calc(100vw * 0.01);
+}
+
+h3 {
+    padding: 0.1rem 0;
+}
+
+span {
+    font-weight: 400;
+}
+
+#img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#picture .slideShow {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#picture .fullClass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: #000;
+    /* position: relative; */
+}
+
+#index {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#controlLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: rgba(255, 255, 255, .3); */
+    opacity: 0;
+    transition: opacity 100ms;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 5; */
+    background-image: linear-gradient(to right,#FFF, transparent, transparent, transparent, transparent , #FFF);
+}
+
+/* #controlLayer:hover #left, #controlLayer:hover #right {
+    background-color: rgba(255, 255, 255, .3);
+} */
+
+#left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+#right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+#fullPage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#controlLayer:hover {
+    opacity: 0.9;
+}
+
+#info-pro {
+    padding: 0.5rem
+}
+
+#feature {
+    grid-area: fd;
+    border: 1px solid red;
+}
+
+#review {
+    grid-area: rd;
+    border: 1px solid yellow;
+}
+
+#comment {
+    grid-area: cd;
+    border: 1px solid black;
+}
+
+/* Info Rating */
+
+#starRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rating, #starRating>div, #buttons {
+    padding: 0.5rem;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.25rem;
+}
+
+#buttons button {
+    height: 100%;
+    border: 1px solid #ffbb33;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 100ms;
+}
+
+#buttons #book {
+    background-color: #ffbb33;
+}
+
+#buttons #book:hover {
+    background-color: #FF8800;
+}
+
+#buttons #appointment {
+    background-color: #FF8800;
+}
+
+#buttons #appointment:hover {
+    background-color: #ffbb33;
+}

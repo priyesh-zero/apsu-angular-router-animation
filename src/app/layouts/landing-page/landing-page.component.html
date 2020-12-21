@@ -1,0 +1,17 @@
+<div id="landing">
+  <div id="layer">
+    <div id="comapany-box">
+      <div id="logo"><h1>&lt;/&gt;</h1></div>
+      <div id="company"><h1>APSU</h1></div>
+      <div id="subline"><h3>Living The Bachelor's Life</h3></div>
+    </div>
+    <div id="options">
+      <div id="services">Our Services : </div>
+      <nav>
+          <a *ngFor="let info of staticInfo" [routerLink]='info.link'>
+              {{info.title}}
+            </a>
+      </nav>
+    </div>
+  </div>
+</div>

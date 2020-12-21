@@ -1,0 +1,32 @@
+
+<div 
+  id="hamBurIcon" 
+  (click)="hamIconClick($event)" 
+  [ngClass]="{'change':navBar.open}">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  <!-- <div id="navLayer"></div> -->
+</div>
+<div 
+  id="navContainer" 
+  [ngStyle]="{'transform':navBar.open?'scale(1)':'scale(0)'}">
+    <div id="nav-head">&lt;/&gt;<br />ASPU</div>
+    <div id="tradLinks">
+      <h4>Traditional Links : </h4>
+      <div class="links">
+        <a href="">Home</a>
+        <a href="">Login</a>
+        <a href="">Register</a>
+        <a href="">About</a>
+      </div>
+    </div>
+    <div id="tradLinks">
+      <h4>Our Services : </h4>
+      <div class="links">
+        <a href="">Homes</a>
+        <a href="">Cooks</a>
+        <a href="">About</a>
+      </div>
+    </div>
+</div>

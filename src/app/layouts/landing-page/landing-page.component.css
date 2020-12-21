@@ -1,0 +1,81 @@
+#landing {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../assets/landing.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#layer {
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#layer>div {
+    padding: 0.25rem 0;
+}
+
+#logo, #company {
+    font-size: calc((100vw * 0.02) + 10px );
+}
+
+#subline {
+    font-size: calc((100vw * 0.01) + 10px );
+}
+
+#company-box, #options {
+    margin: calc(100vw * 0.05)
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+#services {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-left: calc(100vw * 0.05);
+    font-size: calc((100vw * 0.007) + 10px );
+}
+
+nav>a {
+    /* background:rgba(255, 255, 255, 0.9); */
+    text-decoration: none;
+    color: #FFF;
+    padding: 1.2rem;
+    max-width: 300px;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #FFF;
+    font-size: calc((100vw * 0.02) + 5px );
+    /* min-width: 20%; */
+}
+
+a:hover {
+    background: black;
+}
+
+img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+    #services {
+        text-align: center;
+    }
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

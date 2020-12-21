@@ -1,0 +1,45 @@
+<div id="homes" style="margin-top:3rem">
+  <div id="title">
+    <h2>Homes :</h2>
+    <div 
+      id="setting" 
+      [ngStyle]="{width:setting?'350px':''}">
+        <form [ngStyle]="{'visibility':visibility?'visible':'hidden'}">
+          <label for="">Size : </label>
+          <select name="size" id="size">
+            <option value="1BHK">1 BHK</option>
+            <option value="2BHK">2 BHK</option>
+            <option value="3BHK">3 BHK</option>
+          </select>
+          <label for="">Range : </label>
+          <select name="size" id="size">
+            <option value="5KM">5 KM</option>
+            <option value="10KM">10 KM</option>
+            <option value="30KM">30 KM</option>
+          </select>
+        </form>
+        <img 
+          src="../../../assets/settings.svg" 
+          alt="" 
+          id="setImg"
+          [ngStyle]="{'transform':setting?'rotate(45deg)':'rotate(0deg)'}"
+          (click)="settingClick()">
+    </div>
+  </div>
+  <hr>
+  <div id="cards">
+    <a [routerLink]='home.id' *ngFor="let home of homes">
+      <div class="card card-1">
+        <img style="display:block" [src]="home.src" height="200px" width="300ox" alt="">
+        <hr size='3' style="background:#000">
+        <div id="info">
+          <h3>ID : {{home.id}}</h3>
+          <h4>Rent : {{home.rent | currency:'INR'}}</h4>
+          <h4>Deposit : {{home.deposit | currency:'INR'}}</h4>
+          <p>{{home.desc}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+footer {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: #333;
+    color:#DDD;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+h5 {
+    font-size: 1.3rem;
+    padding: 0.2rem 0;
+}
+
+li {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+#col {
+    display: flex;
+    justify-content: center
+}
+
+#col>div {
+    padding: 0 2rem;
+}
+
+#footer {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}

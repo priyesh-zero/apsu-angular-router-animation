@@ -1,0 +1,42 @@
+<div id="homeProduct">
+  <div id="picture">
+    <div id="slideShow" [ngClass]="{'fullClass':fullScreen,'slideShow':!fullScreen}">
+      <img [src]="homeProduct.imgScr[index]" alt="" id="img">
+      <div id="controlLayer">
+        <div id="left" (click)="prevImg()"></div>
+        <div id="right" (click)="nextImg()"></div>
+        <div id="fullPage" (click)="fullScreenClick()" >
+          <img src="../../../assets/fs.png" alt="" width="25px">
+        </div>
+        <div id="index">{{index+1}}/{{homeProduct.imgScr.length}}</div>
+      </div>
+    </div>
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eaque, beatae deserunt totam adipisci sequi obcaecati culpa iure et unde! -->
+  </div>
+  <div id="info-pro">
+    <h2>Detail : </h2>
+    <hr>
+    <h3>Id : <span>{{id}}</span></h3>
+    <h3>Rent : <span>{{homeProduct.rent | currency: 'INR'}}</span></h3>
+    <h3>Deposit : <span>{{homeProduct.deposit | currency: 'INR'}}</span></h3>
+    <p>{{homeProduct.desc}} {{fullscreen}}</p>
+    <div id="rating">
+      <h4>Rating : </h4>
+      <hr>
+      <div id="starRating">
+        <div id="star">
+          <img [src]="src" alt="" *ngFor="let src of ratingStar">
+        </div>
+        <div id="rating"><h3>{{homeProduct.rating | number:'1.0-1'}}</h3></div>
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="book">Book Flat</button>
+      <button id="appointment">Book An Appointment</button>
+    </div>
+  </div>
+  <div id="feature"></div>
+  <div id="review"></div>
+  <div id="comment"></div>
+</div>
+<app-footer></app-footer>
